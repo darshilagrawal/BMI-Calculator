@@ -18,8 +18,13 @@ class ResultViewController: UIViewController {
     
 
     @IBAction func recalculatePressed(_ sender: UIButton) {
-        
-       dismiss(animated: true, completion: nil)
+        UIView.transition(with: sender,
+                                  duration: 1,
+                                  options: .transitionFlipFromRight,
+                                  animations: {
+                                  }, completion: { (finished) -> Void in
+                                    self.dismiss(animated: true, completion: nil)
+                                })
     
     }
    

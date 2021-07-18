@@ -27,7 +27,14 @@ class CalculateViewController: UIViewController {
        let height = heightSlider.value
         let weight = weightSlider.value
         calculatorBrain.calculateBMI(height,weight)
-        self.performSegue(withIdentifier: "gotoResult", sender:self)
+        UIView.transition(with: sender,
+                                  duration: 1,
+                                  options: .transitionFlipFromRight,
+                                  animations: {
+                                  }, completion: { (finished) -> Void in
+                                    self.performSegue(withIdentifier: "gotoResult", sender:self)
+
+                                })
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoResult"{
