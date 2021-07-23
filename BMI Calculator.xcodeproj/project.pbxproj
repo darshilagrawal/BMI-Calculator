@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		AD64359A2312D0BC00E22B00 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD6435992312D0BC00E22B00 /* README.md */; };
 		D50409C325C7BB8E003947DE /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50409C225C7BB8E003947DE /* CalculateViewController.swift */; };
 		D50409C625C7BB91003947DE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50409C525C7BB91003947DE /* ResultViewController.swift */; };
+		D52E9D1F26AB2CE800CACB19 /* SPConfetti in Frameworks */ = {isa = PBXBuildFile; productRef = D52E9D1E26AB2CE800CACB19 /* SPConfetti */; };
 		D5B2B3AC245F044A00320FCB /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2B3AB245F044A00320FCB /* CalculatorBrain.swift */; };
 		D5F26218245F6D52002A2954 /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F26217245F6D52002A2954 /* BMI.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D52E9D1F26AB2CE800CACB19 /* SPConfetti in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +121,9 @@
 			dependencies = (
 			);
 			name = "BMI Calculator";
+			packageProductDependencies = (
+				D52E9D1E26AB2CE800CACB19 /* SPConfetti */,
+			);
 			productName = "BMI Calculator";
 			productReference = AD0B9F76230D61800065EFD9 /* BMI Calculator.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +152,9 @@
 				Base,
 			);
 			mainGroup = AD0B9F6D230D61800065EFD9;
+			packageReferences = (
+				D52E9D1D26AB2CE800CACB19 /* XCRemoteSwiftPackageReference "SPConfetti" */,
+			);
 			productRefGroup = AD0B9F77230D61800065EFD9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -378,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D52E9D1D26AB2CE800CACB19 /* XCRemoteSwiftPackageReference "SPConfetti" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SPConfetti";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D52E9D1E26AB2CE800CACB19 /* SPConfetti */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D52E9D1D26AB2CE800CACB19 /* XCRemoteSwiftPackageReference "SPConfetti" */;
+			productName = SPConfetti;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AD0B9F6E230D61800065EFD9 /* Project object */;
 }

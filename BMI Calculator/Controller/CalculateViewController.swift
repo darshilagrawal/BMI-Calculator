@@ -32,18 +32,25 @@ class CalculateViewController: UIViewController {
                                   options: .transitionFlipFromRight,
                                   animations: {
                                   }, completion: { (finished) -> Void in
-                                    self.performSegue(withIdentifier: "gotoResult", sender:self)
 
                                 })
+        let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        destinationVC.bmiValue = calculatorBrain.getBMIValue()
+        destinationVC.advice = calculatorBrain.getAdvice()
+        destinationVC.color=calculatorBrain.getColor()
+        destinationVC.tagValue = calculatorBrain.getTag()
+//        self.present(destinationVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(destinationVC, animated: true)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "gotoResult"{
-            let destinationVC = segue.destination as! ResultViewController
-            destinationVC.bmiValue = calculatorBrain.getBMIValue()
-            destinationVC.advice = calculatorBrain.getAdvice()
-            destinationVC.color=calculatorBrain.getColor()
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "gotoResult"{
+//            let destinationVC = segue.destination as! ResultViewController
+//            destinationVC.bmiValue = calculatorBrain.getBMIValue()
+//            destinationVC.advice = calculatorBrain.getAdvice()
+//            destinationVC.color=calculatorBrain.getColor()
+//            destinationVC.tagValue = calculatorBrain.getTag()
+//        }
+//    }
 }
 
 
