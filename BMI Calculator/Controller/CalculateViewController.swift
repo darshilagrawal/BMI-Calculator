@@ -21,8 +21,7 @@ class CalculateViewController: UIViewController {
     @IBAction func weightChange(_ sender: UISlider) {
         weightSliderOutput.text="\(Int(sender.value))Kg"
     }
-
-
+    
     @IBAction func calculatePressed(_ sender: UIButton) {
        let height = heightSlider.value
         let weight = weightSlider.value
@@ -42,6 +41,7 @@ class CalculateViewController: UIViewController {
 //        self.present(destinationVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
+    
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "gotoResult"{
 //            let destinationVC = segue.destination as! ResultViewController

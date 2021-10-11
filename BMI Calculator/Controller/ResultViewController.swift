@@ -14,15 +14,13 @@ class ResultViewController: UIViewController {
         bmiLabel.text=bmiValue
         adviceLabel.text=advice
         view.backgroundColor=color
-        if let tagValueUnwrapped = tagValue{
-            if tagValueUnwrapped == 1{
+        if let tagValueUnwrapped = tagValue {
+            if tagValueUnwrapped == 1 {
                 SPConfetti.startAnimating(.fullWidthToDown, particles: .triangle, duration: 5)
-                
             }
         }
     }
     
-
     @IBAction func recalculatePressed(_ sender: UIButton) {
         UIView.transition(with: sender,
                           duration: 1.5,
