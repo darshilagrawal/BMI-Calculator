@@ -14,3 +14,7 @@
 * Pass by value vs. pass by reference.
 * Formatting Strings.
 * Color literals.
+
+## Screenshots
+
+<img src="Documentation/1.png" width="250" height="500"> || <img src="Documentation/2.png" width="250" height="500">
